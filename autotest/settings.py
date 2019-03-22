@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'set',
     'apptest',
     'webtest',
-    'djcelery',
+
 ]
 
 MIDDLEWARE = [

@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>全部接口测试报告</h1>
-<p class='attribute'><strong>Start Time:</strong> 2019-03-22 17:05:54</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:06.183937</p>
-<p class='attribute'><strong>Status:</strong> Failure 1 Error 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2019-03-22 21:16:01</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:02.877070</p>
+<p class='attribute'><strong>Status:</strong> Pass 1 Failure 1</p>
 
 <p class='description'>全部接口</p>
 </div>
@@ -221,137 +221,31 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='errorClass'>
+<tr class='passClass'>
     <td>apistest_case.ApisTest</td>
     <td>1</td>
-    <td>0</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
+    <td>0</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='errorCase'><div class='testcase'>test_readApiscase</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_readApiscase</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        error</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
 
-    <div id='div_ft1.1' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: Traceback (most recent call last):
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
-    (self._dns_host, self.port), self.timeout, **extra_kw)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
-    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno 11001] getaddrinfo failed
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
-    chunked=chunked)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
-    self._validate_conn(conn)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
-    conn.connect()
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
-    conn = self._new_conn()
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
-    self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000000D41DC34940&gt;: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
-    timeout=timeout
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
-    _stacktrace=sys.exc_info()[2])
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.baidu.com', port=443): Max retries exceeded with url: /?s?wd=%E8%B0%B7%E6%AD%8C (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000000D41DC34940&gt;: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "G:\autotest\apitest\apistest_case.py", line 32, in test_readApiscase
-    res = interfaceTest(case_list)
-  File "G:\autotest\apitest\apistest_case.py", line 98, in interfaceTest
-    results = requests.get(new_url).text
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 75, in get
-    return request('get', url, params=params, **kwargs)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 60, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
-    resp = self.send(prep, **send_kwargs)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
-    r = adapter.send(request, **kwargs)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.baidu.com', port=443): Max retries exceeded with url: /?s?wd=%E8%B0%B7%E6%AD%8C (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000000D41DC34940&gt;: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
-Traceback (most recent call last):
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 159, in _new_conn
-    (self._dns_host, self.port), self.timeout, **extra_kw)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\connection.py", line 57, in create_connection
-    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\socket.py", line 748, in getaddrinfo
-    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
-socket.gaierror: [Errno 11001] getaddrinfo failed
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
-    chunked=chunked)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 343, in _make_request
-    self._validate_conn(conn)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 839, in _validate_conn
-    conn.connect()
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 301, in connect
-    conn = self._new_conn()
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connection.py", line 168, in _new_conn
-    self, "Failed to establish a new connection: %s" % e)
-urllib3.exceptions.NewConnectionError: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000000D41DC34940&gt;: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 449, in send
-    timeout=timeout
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\connectionpool.py", line 638, in urlopen
-    _stacktrace=sys.exc_info()[2])
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\urllib3\util\retry.py", line 398, in increment
-    raise MaxRetryError(_pool, url, error or ResponseError(cause))
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.baidu.com', port=443): Max retries exceeded with url: /?s?wd=%E8%B0%B7%E6%AD%8C (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000000D41DC34940&gt;: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "G:\autotest\apitest\apistest_case.py", line 32, in test_readApiscase
-    res = interfaceTest(case_list)
-  File "G:\autotest\apitest\apistest_case.py", line 98, in interfaceTest
-    results = requests.get(new_url).text
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 75, in get
-    return request('get', url, params=params, **kwargs)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\api.py", line 60, in request
-    return session.request(method=method, url=url, **kwargs)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 533, in request
-    resp = self.send(prep, **send_kwargs)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\sessions.py", line 646, in send
-    r = adapter.send(request, **kwargs)
-  File "C:\Users\kxy\AppData\Local\Programs\Python\Python37\lib\site-packages\requests\adapters.py", line 516, in send
-    raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.baidu.com', port=443): Max retries exceeded with url: /?s?wd=%E8%B0%B7%E6%AD%8C (Caused by NewConnectionError('&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x000000D41DC34940&gt;: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
-
+pt1.1: 
 
         </pre>
     </div>
@@ -404,9 +298,9 @@ AssertionError
 <tr id='total_row'>
     <td>Total</td>
     <td>2</td>
+    <td>1</td>
+    <td>1</td>
     <td>0</td>
-    <td>1</td>
-    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>
