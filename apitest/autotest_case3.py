@@ -1,11 +1,11 @@
-import requests,time,re,sys #?
-import urllib,zlib #?
+import requests,time,re,sys
+import urllib,zlib
 import pymysql
-import HTMLTestRunner #?
-import unittest #?
-from trace import CoverageResults #?
+import HTMLTestRunner
+import unittest
+from trace import CoverageResults
 import json
-from idlelib.rpc import response_queue  #?
+from idlelib.rpc import response_queue
 from time import sleep
 
 HOSTNAME = '127.0.0.1'
